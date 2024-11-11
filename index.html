@@ -1,144 +1,166 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- displays site properly based on user's device -->
 
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="./assets/images/favicon-32x32.png"
-    />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- displays site properly based on user's device -->
 
-    <title>Frontend Mentor | Blog preview card</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png" />
 
-    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-    <style>
-      @font-face {
-        font-family: "Figtree";
-        src: url(assets/fonts/Figtree-VariableFont_wght.ttf);
-      }
-      @font-face {
-        font-family: "FigtreeItalic";
-        src: url(assets/fonts/Figtree-Italic-VariableFont_wght.ttf);
-      }
+  <title>Frontend Mentor | Blog preview card</title>
 
-      @font-face {
-        font-family: "FigtreeExtraBold";
-        src: url(assets/fonts/static/Figtree-ExtraBold.ttf);
-      }
-      @font-face {
-        font-family: "FigtreeSemiBold";
-        src: url(assets/fonts/static/Figtree-SemiBold.ttf);
-      }
-      body {
-        background-color: #f4d04e;
-      }
-      .card {
-        background-color: white;
-        border: 2px solid black;
-        border-radius: 20px;
-        box-shadow: 10px 13px 0 0 black, 6px 12px 0 -6px black;
-        padding: 24px;
-        margin: 100px auto;
-        max-width: 350px;
-      }
-      .card .img {
-        text-align: center;
-        max-width: 100%;
-        border-radius: 10px;
-        overflow: hidden;
-        margin: 0 auto;
-        margin-bottom: 24px;
-      }
-      .category {
-        font-family: FigtreeExtraBold;
-        text-align: left;
-        line-height: 150%;
-        font-size: 16px;
-        color: #111111;
-        margin-bottom: 24px;
-        font-weight: 900;
-        background-color: #f4d04e;
-        padding: 4px 12px;
-        border-radius: 10px;
-        display: inline-block;
-      }
-      .published {
-        font-family: Figtree;
-        text-align: left;
-        line-height: 150%;
-        font-size: 16px;
-        color: #111111;
-        margin-bottom: 24px;
-        font-weight: bold;
-      }
-      h1 {
-        font-family: FigtreeExtraBold;
-        text-align: left;
-        font-size: 24px;
-        line-height: 150%;
-        margin-bottom: 12px;
-        font-weight: 900;
-        color: #111111;
-      }
-      p {
-        font-family: Figtree;
-        text-align: left;
-        font-size: 16px;
-        line-height: 150%;
-        margin-bottom: 24px;
-        font-weight: 500;
-        color: #6b6b6b;
-      }
-      .profile {
-        font-family: FigtreeExtraBold;
-        line-height: 150%;
-        display: flex;
-        align-items: center;
-        justify-content: left;
-        gap: 10px;
-        font-weight: 500;
-        font-size: 14px;
-        color: #111111;
-      }
-      .attribution {
-        font-size: 11px;
-        text-align: center;
-      }
-      .attribution a {
-        color: hsl(228, 45%, 44%);
-      }
-    </style>
-  </head>
-  <body>
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    @font-face {
+      font-family: "Figtree";
+      src: url(assets/fonts/Figtree-VariableFont_wght.ttf);
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: "FigtreeItalic";
+      src: url(assets/fonts/Figtree-Italic-VariableFont_wght.ttf);
+    }
+
+    @font-face {
+      font-family: "FigtreeExtraBold";
+      src: url(assets/fonts/static/Figtree-ExtraBold.ttf);
+    }
+
+    @font-face {
+      font-family: "FigtreeSemiBold";
+      src: url(assets/fonts/static/Figtree-SemiBold.ttf);
+    }
+
+    body {
+      background-color: #f4d04e;
+    }
+
+    .card {
+      background-color: white;
+      border: 2px solid black;
+      border-radius: 20px;
+      box-shadow: 10px 13px 0 0 black, 6px 12px 0 -6px black;
+      padding: 24px;
+      margin: 100px auto;
+      max-width: 350px;
+    }
+
+    .card .img {
+      text-align: center;
+      max-width: 100%;
+      border-radius: 10px;
+      overflow: hidden;
+      margin: 0 auto;
+      margin-bottom: 24px;
+    }
+
+    .category p {
+      font-family: FigtreeExtraBold;
+      text-align: left;
+      line-height: 1.5;
+      font-size: 16px;
+      color: #111111;
+      margin-bottom: 24px;
+      font-weight: 900;
+      background-color: #f4d04e;
+      padding: 4px 12px;
+      border-radius: 10px;
+      display: inline-block;
+    }
+
+    .published {
+      font-family: Figtree;
+      text-align: left;
+      line-height: 150%;
+      font-size: 16px;
+      color: #111111;
+      margin-bottom: 24px;
+      font-weight: bold;
+    }
+
+    h1 {
+      font-family: FigtreeExtraBold;
+      text-align: left;
+      font-size: 24px;
+      line-height: 1.5;
+      margin-bottom: 12px;
+      font-weight: 900;
+      color: #111111;
+    }
+
+    p {
+      font-family: Figtree;
+      text-align: left;
+      font-size: 16px;
+      line-height: 1.5;
+      margin-bottom: 24px;
+      font-weight: 500;
+      color: #6b6b6b;
+    }
+
+    .profile {
+      font-family: FigtreeExtraBold;
+      line-height: 1.5;
+      display: flex;
+      align-items: center;
+      justify-content: left;
+      gap: 10px;
+      font-weight: 500;
+      font-size: 14px;
+      color: #111111;
+    }
+
+    .profile h2 {
+      font: inherit;
+    }
+
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+  </style>
+</head>
+
+<body>
+  <main>
     <section class="card">
       <div class="img">
-        <img src="assets/images/illustration-article.svg" alt="" />
+        <img src="assets/images/illustration-article.svg" alt="illustration" />
       </div>
-      <div class="category">Learning</div>
+      <div class="category">
+        <p>Learning</p>
+
+      </div>
       <div class="published">Published 21 Dec 2023</div>
 
       <div class="title">
-        <h1 role="heading">HTML & CSS foundations</h1>
-        <p role="banner">
+        <h1>HTML & CSS foundations</h1>
+        <p>
           These languages are the backbone of every website, defining structure,
           content, and presentation.
         </p>
       </div>
       <div class="profile">
-        <span><img src="assets/images/image-avatar.webp" alt="" /></span>
-        <span>Greg Hooper</span>
+        <span><img src="assets/images/image-avatar.webp" alt="avatar" /></span>
+        <span>
+          <h2>Greg Hooper</h2>
+        </span>
       </div>
     </section>
+  </main>
 
-    <div class="attribution">
-      Challenge by
-      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-        >Frontend Mentor</a
-      >. Coded by <a href="#">Omar kamal</a>.
-    </div>
-  </body>
+
+  <div class="attribution">
+    Challenge by
+    <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by <a href="#">Omar
+      kamal</a>.
+  </div>
+</body>
+
 </html>
